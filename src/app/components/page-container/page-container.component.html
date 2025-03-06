@@ -1,0 +1,18 @@
+<!-- page-container.component.html -->
+<div class="flex h-screen">
+  <!-- Sidebar -->
+  <app-sidebar class="w-1/4 transition-transform transform" [class.-translate-x-full]="isSidebarVisible"></app-sidebar>
+
+  <!-- Contenido principal -->
+  <div class="flex-1 p-4 bg-gray-100">
+    <app-breadcrumb ></app-breadcrumb>
+    <app-content></app-content>
+    <app-footer></app-footer>
+    <!-- Botón para mostrar/ocultar Sidebar -->
+    <button (click)="toggleSidebar()" class="fixed top-4 left-2 bg-blue-600 text-white p-5 rounded">
+      ☰
+    </button>
+  </div>
+
+  
+</div>

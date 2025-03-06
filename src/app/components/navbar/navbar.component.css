@@ -1,0 +1,87 @@
+/* Navbar principal */
+nav {
+    background-color: #2563eb; /* Azul fuerte */
+    color: white;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Botones del menú */
+  nav button {
+    background: transparent;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  nav button:hover {
+    background-color: #1d4ed8; /* Azul más oscuro */
+  }
+  
+  /* Contenedor de opciones (dropdown) */
+  .group {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .group-hover div {
+    display: block;
+  }
+  
+  /* Menú desplegable */
+  .group div.absolute {
+    display: none;
+    position: absolute;
+    background-color: white;
+    color: black;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    min-width: 150px;
+    z-index: 10;
+  }
+  
+  .group:hover div.absolute {
+    display: block;
+  }
+  
+  /* Enlaces dentro del menú desplegable */
+  .group div.absolute a {
+    display: block;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: black;
+    transition: background 0.3s;
+  }
+  
+  .group div.absolute a:hover {
+    background-color: #e5e7eb; /* Gris claro */
+  }
+  
+  /* Imagen de usuario */
+  nav img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+  
+  /* Ajustes responsivos */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .flex {
+      flex-direction: column;
+      width: 80%;
+    }
+  
+    .group div.absolute {
+      width: 80%;
+      left: 0;
+    }
+  }
+  

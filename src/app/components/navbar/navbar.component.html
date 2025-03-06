@@ -1,0 +1,34 @@
+<nav class="bg-blue-600 text-white p-4 flex justify-between items-center">
+    <!-- Menú Principal -->
+    <div class="flex space-x-4">
+        <button class="hover:bg-blue-700 px-10 py-5 ml-64 rounded">Inicio</button>
+        <div class="relative group">
+            <button class="hover:bg-blue-700 px-3 py-2 rounded">Ejercicios ▼</button>
+            <div class="absolute hidden group-hover:block bg-white text-black shadow-lg mt-2">
+                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-01'">Ejercicio 1</a>
+                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-02'">Ejercicio 2</a>
+                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-03'">Ejercicio 3</a>
+                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-04'">Ejercicio 4</a>
+                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-05'">Ejercicio 5</a>
+                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-06'">Ejercicio 6</a>
+            </div>
+            <button mat-button>Tareas</button>
+            <button mat-button>Examen Práctico</button>
+            <button mat-button>Acerca de</button>
+        </div>
+    </div>
+  
+    <!-- Botón de Usuario o Iniciar Sesión -->
+    <div class="relative group">
+        <button class="flex items-center space-x-2 hover:bg-blue-700 px-3 py-2 rounded">
+            <span>Usuario</span>
+            <img [src]="getSafeUrl(userImage)" alt="Usuario" class="user-avatar">
+        </button>
+        <div class="absolute hidden group-hover:block bg-white text-black shadow-lg right-0 mt-2">
+            <a class="block px-4 py-2 hover:bg-gray-200">Perfil</a>
+            <a class="block px-4 py-2 hover:bg-gray-200" (click)="logout()">Cerrar sesión</a>
+        </div>
+    </div>
+  
+  </nav>
+  

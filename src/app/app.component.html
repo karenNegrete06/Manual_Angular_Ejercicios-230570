@@ -1,0 +1,42 @@
+<app-navbar *ngIf="isAuthenticated" (logoutEvent)="logout()"></app-navbar>
+
+<!-- Muestra el contenedor principal solo si hay sesión -->
+<app-page-container *ngIf="isAuthenticated"></app-page-container>
+
+<!-- Si NO hay sesión, muestra las páginas públicas y login -->
+
+<app-login *ngIf="!isAuthenticated" (loginEvent)="login()"></app-login>
+
+<!-- El Footer siempre está visible -->
+
+
+<!--<div>
+  <app-navbar></app-navbar>
+  <app-page-container></app-page-container>
+  
+</div>-->
+
+<!-- <app-toolbar></app-toolbar> -->
+
+<!-- <h1>Manual de practicas</h1>
+  <p>Elaborado por: <strong>Karen Lizbeth Negrete Hernández</strong> </p>
+-->
+<!-- <hr/>
+<h2>Ejercicio 1:</h2>
+<app-ejercicio-01></app-ejercicio-01>
+<hr/>
+<h2>Ejercicio 2:</h2>
+<app-ejercicio-02></app-ejercicio-02>
+<hr/>
+<h2>Ejercicio 3:</h2>
+<app-ejercicio-03></app-ejercicio-03>
+<hr/>
+<h2>Ejercicio 4:</h2>
+<app-ejercicio-04></app-ejercicio-04>
+<hr>
+<h2>Ejercicio 5:</h2>
+<app-ejercicio-05></app-ejercicio-05>
+<hr>
+<h2>Ejercicio 6:</h2>
+<app-ejercicio-06></app-ejercicio-06>
+<hr> -->
