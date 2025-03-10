@@ -28,14 +28,17 @@ export class AppComponent {
   isAuthenticated: boolean = false; // Estado inicial
 
   constructor(private router: Router) {}
+  selectedExercise: { name: string, description: string } = { name: '', description: '' };
 
-  login() {
-    this.isAuthenticated = true;
-    this.router.navigate(['/dashboard']); // ✅ Redirige a la página autenticada
+  updateExercise(exercise: { name: string, description: string }) {
+    this.selectedExercise = exercise; // 🔹 Guarda el nombre y la descripción
   }
 
   logout() {
-    this.isAuthenticated = false;
-    this.router.navigate(['/login']); // ✅ Redirige a la página sin sesión
+    this.isAuthenticated = false; // 🔹 Lógica para cerrar sesión
+  }
+
+  login() {
+    this.isAuthenticated = true; // 🔹 Lógica para iniciar sesión
   }
 }
