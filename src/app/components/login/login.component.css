@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50vh; /* Reduce la altura ocupada */
+    height: 30vh; /* Reduce la altura ocupada */
   }
   
   .login-box {
@@ -13,4 +13,11 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
   }
-  
+  /* Asegura que el contenedor ocupe toda la pantalla */
+.flex {
+  display: flex;
+}
+
+.h-screen {
+  height: 95vh;
+}

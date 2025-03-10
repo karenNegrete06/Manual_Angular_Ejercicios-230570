@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './ejercicio-07.component.css'
 })
 export class Ejercicio07Component {
+  message = '';
 
+  onMouseOver() {
+    this.message = 'Way to go 🚀';
+  }
 }

@@ -16,11 +16,9 @@ import { Router } from '@angular/router';
     CommonModule,
     LoginComponent,
     NavbarComponent,
-    FooterComponent,
-    ContentComponent,
     PageContainerComponent,
     MatButtonModule,
-    PagesComponent
+
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

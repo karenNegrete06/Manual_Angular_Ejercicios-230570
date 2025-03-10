@@ -1,0 +1,18 @@
+.resaltado {
+    width: 500px; /* O ajusta el ancho según lo necesites */
+    height: 30px; /* Ajustado para que sea más largo */
+    padding: 10px;
+    border: 2px solid #007bff; /* Borde azul */
+    border-radius: 5px;
+    background-color: #f8f9fa; /* Color de fondo ligero */
+    font-size: 16px;
+    outline: none; /* Elimina el borde al hacer clic */
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    overflow-y: auto; /* Agrega scroll si el contenido es demasiado grande */
+}
+
+/* Efecto al enfocar el div */
+.resaltado:focus {
+    border-color: #0056b3; /* Azul más oscuro al enfocar */
+    background-color: #ffffff;
+}
