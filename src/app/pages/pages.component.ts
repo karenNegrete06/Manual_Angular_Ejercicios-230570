@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pages',
-  imports: [ BreadcrumbComponent, ContentComponent, FooterComponent],
+  imports: [],
   templateUrl: './pages.component.html',
   styleUrl: './pages.component.css'
 })

@@ -7,7 +7,7 @@ import { LoginComponent } from "../login/login.component";
 @Component({
   selector: 'app-content',
   standalone: true,  // Asegúrate de que sea un componente standalone si lo usas así
-  imports: [RouterModule, CommonModule, LoginComponent],
+  imports: [RouterModule, CommonModule],
   templateUrl: './content.component.html',
   styleUrl: './content.component.css',
 })

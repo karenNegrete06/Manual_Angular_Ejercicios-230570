@@ -1,0 +1,27 @@
+.btn {
+    background-color: #007bff; /* Azul vibrante */
+    color: white; /* Texto en blanco */
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Ligero aumento al pasar el cursor */
+}
+
+.btn:active {
+    transform: scale(0.95); /* Efecto de clic */
+}
+
+p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+    text-align: center;
+}

@@ -28,4 +28,13 @@ export class NavbarComponent {
   logout() {
     this.logoutEvent.emit(); // Dispara el evento de cierre de sesión
   }
+  exerciseDescription: string = ''; // Variable para almacenar la descripción
+
+  setExerciseDescription(description: string) {
+    this.exerciseDescription = description; // Actualiza la descripción al hacer clic en un ejercicio
+  }
+
+  // Resto de tu lógica del componente...
+
+  
 }

@@ -5,12 +5,19 @@
         <div class="relative group">
             <button class="hover:bg-blue-700 px-3 py-2 rounded">Ejercicios ▼</button>
             <div class="absolute hidden group-hover:block bg-white text-black shadow-lg mt-2">
-                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-01'">Ejercicio 1</a>
-                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-02'">Ejercicio 2</a>
-                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-03'">Ejercicio 3</a>
-                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-04'">Ejercicio 4</a>
-                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-05'">Ejercicio 5</a>
-                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-06'">Ejercicio 6</a>
+                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-01'" (click)="setExerciseDescription('Este es el contenido para Ejercicio 1')">Ejercicio 1</a>
+                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-02'" (click)="setExerciseDescription('Este es el contenido para Ejercicio 2')">Ejercicio 2</a>
+                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-03'" (click)="setExerciseDescription('Este es el contenido para Ejercicio 3')">Ejercicio 3</a>
+                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-04'" (click)="setExerciseDescription('Este es el contenido para Ejercicio 4')">Ejercicio 4</a>
+                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-05'" (click)="setExerciseDescription('Este es el contenido para Ejercicio 5')">Ejercicio 5</a>
+                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-06'" (click)="setExerciseDescription('Este es el contenido para Ejercicio 6')">Ejercicio 6</a>
+                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-07'" (click)="setExerciseDescription('Este es el contenido para Ejercicio 6')">Ejercicio 7</a>
+                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-08'" (click)="setExerciseDescription('Este es el contenido para Ejercicio 6')">Ejercicio 8</a>
+                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-09'" (click)="setExerciseDescription('Este es el contenido para Ejercicio 6')">Ejercicio 9</a>
+                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-10'" (click)="setExerciseDescription('Este es el contenido para Ejercicio 6')">Ejercicio 10</a>
+                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-11'" (click)="setExerciseDescription('Este es el contenido para Ejercicio 6')">Ejercicio 11</a>
+                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-12'" (click)="setExerciseDescription('Este es el contenido para Ejercicio 6')">Ejercicio 12</a>
+                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-13'" (click)="setExerciseDescription('Este es el contenido para Ejercicio 6')">Ejercicio 13</a>
             </div>
             <button mat-button>Tareas</button>
             <button mat-button>Examen Práctico</button>
@@ -29,6 +36,8 @@
             <a class="block px-4 py-2 hover:bg-gray-200" (click)="logout()">Cerrar sesión</a>
         </div>
     </div>
-  
+
+  <!-- Sidebar con la descripción del ejercicio -->
+
   </nav>
   

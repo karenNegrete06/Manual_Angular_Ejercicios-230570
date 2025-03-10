@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-ejercicio-09',
@@ -7,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './ejercicio-09.component.css'
 })
 export class Ejercicio09Component {
+  @Output() addItemEvent = new EventEmitter<string>();
 
+  items = new Array();
+
+  addItem(item: string) {
+    this.items.push(item);
+  }
+  
 }
