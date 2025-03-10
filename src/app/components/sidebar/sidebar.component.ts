@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
 import { EjercicioService } from '../../ejercicio.service';
 import { CommonModule } from '@angular/common';
 
@@ -19,10 +19,5 @@ ejercicioSeleccionado: any;
       this.ejercicioActual = ejercicio;
     });
   }
-  exerciseDescription: string = ''; // Variable para almacenar la descripción
-
-  setExerciseDescription(description: string) {
-    this.exerciseDescription = description; // Actualiza la descripción al hacer clic en un ejercicio
-  }
-
+  @Input() exercise: { name: string, description: string } = { name: '', description: '' };
 }

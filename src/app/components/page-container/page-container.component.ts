@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SidebarComponent } from "../sidebar/sidebar.component";
 import { ContentComponent } from "../content/content.component";
 import { FooterComponent } from "../footer/footer.component";
@@ -29,4 +29,11 @@ export class PageContainerComponent {
       this.isAuthenticated = false;
       this.router.navigate(['/pages']); // ✅ Redirige a la página sin sesión
     }
+    @Input()exerciseDescription!: string;
+    selectedExercise: string = ''; // 🔹 Variable para almacenar la descripción
+
+  updateExerciseDescription(description: string) {
+    this.selectedExercise = description; // 🔹 Actualiza la descripción cuando se hace clic en un ejercicio
+  }
+  @Input() exercise: { name: string, description: string } = { name: '', description: '' };
 }

@@ -1,11 +1,9 @@
-<app-navbar *ngIf="isAuthenticated" (logoutEvent)="logout()"></app-navbar>
+<app-navbar *ngIf="isAuthenticated" (exerciseSelected)="updateExercise($event)" (logoutEvent)="logout()"></app-navbar>
 
-<!-- Muestra el contenedor principal solo si hay sesión -->
-<app-page-container *ngIf="isAuthenticated"></app-page-container>
-
-<!-- Si NO hay sesión, muestra las páginas públicas y login -->
+<app-page-container *ngIf="isAuthenticated" [exercise]="selectedExercise"></app-page-container>
 
 <app-login *ngIf="!isAuthenticated" (loginEvent)="login()"></app-login>
+
 
 <!-- El Footer siempre está visible -->
 
