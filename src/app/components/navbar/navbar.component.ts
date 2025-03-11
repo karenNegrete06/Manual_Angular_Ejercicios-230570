@@ -37,6 +37,7 @@ export class NavbarComponent {
     this.exerciseSelected.emit({ name, description }); // 🔹 Enviar nombre y descripción
   }
   
+  
 }
 
 
