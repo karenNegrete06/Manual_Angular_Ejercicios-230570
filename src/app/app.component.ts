@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { Page1Component } from "./pages/page1/page1.component";
 import { PagesComponent } from "./pages/pages.component";
 import { Router } from '@angular/router';
+import { GraficaBasicaComponent } from "./grafica-basica/grafica-basica.component";
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -17,8 +18,7 @@ import { Router } from '@angular/router';
     LoginComponent,
     NavbarComponent,
     PageContainerComponent,
-    MatButtonModule,
-
+    MatButtonModule
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -28,9 +28,9 @@ export class AppComponent {
   isAuthenticated: boolean = false; // Estado inicial
 
   constructor(private router: Router) {}
-  selectedExercise: { name: string, description: string } = { name: '', description: '' };
+  selectedExercise: { name: string, description: string, objective: string } = { name: '', description: '', objective: '' };
 
-  updateExercise(exercise: { name: string, description: string }) {
+  updateExercise(exercise: { name: string, description: string ,objective: string}) {
     this.selectedExercise = exercise; // 🔹 Guarda el nombre y la descripción
   }
 

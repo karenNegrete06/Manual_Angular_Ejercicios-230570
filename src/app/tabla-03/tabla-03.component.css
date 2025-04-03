@@ -1,0 +1,130 @@
+/* Estilo general para la tabla */
+.table-container {
+    max-width: 100%;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Controles de búsqueda */
+  .search-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .search-controls input,
+  .search-controls select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    outline: none;
+    width: 48%;
+  }
+  
+  .search-controls input:focus,
+  .search-controls select:focus {
+    border-color: #2563eb;
+  }
+  
+  /* Tabla elegante */
+  .elegant-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .elegant-table thead {
+    background-color: #2563eb;
+    color: white;
+  }
+  
+  .elegant-table th,
+  .elegant-table td {
+    padding: 12px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .elegant-table tr:hover {
+    background-color: #f1f5f9;
+  }
+  
+  .elegant-table th {
+    font-size: 18px;
+  }
+  
+  .elegant-table td {
+    font-size: 16px;
+  }
+  
+  /* Mensaje sin resultados */
+  .no-results {
+    text-align: center;
+    font-size: 18px;
+    color: #888;
+  }
+  
+  /* Paginación */
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    padding: 10px 20px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .pagination button:disabled {
+    background-color: #d1d5db;
+    cursor: not-allowed;
+  }
+  
+  .pagination button:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .pagination span {
+    font-size: 16px;
+  }
+  
+  /* Ajustes responsivos */
+  @media (max-width: 768px) {
+    .search-controls {
+      flex-direction: column;
+    }
+  
+    .search-controls input,
+    .search-controls select {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .elegant-table th,
+    .elegant-table td {
+      padding: 10px;
+    }
+  
+    .pagination {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .pagination button {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  

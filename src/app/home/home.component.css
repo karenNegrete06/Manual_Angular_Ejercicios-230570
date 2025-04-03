@@ -1,0 +1,62 @@
+.transition-shadow {
+  transition-property: box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+::ng-deep .mat-mdc-card {
+  border-radius: 16px !important;
+  overflow: hidden;
+}
+
+::ng-deep .mat-mdc-card-header {
+  padding: 20px 16px 0 16px !important;
+}
+
+.mat-mdc-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mat-mdc-card-body {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0 0 16px 16px;
+  transition: background-color 0.3s ease;
+  color: #333;
+}
+
+.mat-mdc-card-header {
+  background: linear-gradient(to right, #3b82f6, #1e40af); /* Gradiente suave */
+}
+
+.mat-mdc-card-body {
+  background-color: white;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mat-mdc-card-header h3 {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.mat-mdc-card-body p {
+  font-size: 1.125rem;
+  color: #333;
+}
+
+a {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+  background-color: #047857;
+  transform: scale(1.05);
+}
+
+h1 {
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+  font-family: 'Roboto', sans-serif;
+}

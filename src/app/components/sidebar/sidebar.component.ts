@@ -6,11 +6,10 @@ import { CommonModule } from '@angular/common';
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css'],
-  imports:[CommonModule]
+  imports: [CommonModule]
 })
 export class SidebarComponent implements OnInit {
   ejercicioActual: any = null;
-ejercicioSeleccionado: any;
 
   constructor(@Inject(EjercicioService) private ejercicioService: EjercicioService) {}
 
@@ -19,5 +18,10 @@ ejercicioSeleccionado: any;
       this.ejercicioActual = ejercicio;
     });
   }
-  @Input() exercise: { name: string, description: string } = { name: '', description: '' };
+
+  @Input() exercise: { name: string, description: string, objective: string } = { 
+    name: '', 
+    description: '', 
+    objective: '' 
+  };
 }

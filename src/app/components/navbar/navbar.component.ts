@@ -15,9 +15,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+  isPracticasOpen = false;
+  isTablasOpen = false;
+  
   @Input() isAuthenticated: boolean = false;
   @Output() logoutEvent = new EventEmitter<void>();
-
 
   userImage = 'https://c1.klipartz.com/pngpicture/823/765/sticker-png-login-icon-system-administrator-user-user-profile-icon-design-avatar-face-head.png';
 
@@ -31,13 +33,9 @@ export class NavbarComponent {
     this.logoutEvent.emit(); // Dispara el evento de cierre de sesión
   }
 
-  @Output() exerciseSelected = new EventEmitter<{ name: string, description: string }>();
+  @Output() exerciseSelected = new EventEmitter<{ name: string, description: string, objective: string }>();
 
-  setExercise(name: string, description: string) {
-    this.exerciseSelected.emit({ name, description }); // 🔹 Enviar nombre y descripción
+  setExercise(name: string, description: string, objective: string) {
+    this.exerciseSelected.emit({ name, description, objective }); // 🔹 Enviar nombre, descripción y objetivo
   }
-  
-  
 }
-
-

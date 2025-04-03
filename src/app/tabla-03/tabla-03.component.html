@@ -1,0 +1,89 @@
+<div class="table-container">
+  <!-- CONTROLES DE BÚSQUEDA Y PÁGINA -->
+  <div class="search-controls">
+    <input 
+      type="text" 
+      [(ngModel)]="searchTerm"
+      placeholder="Buscar canción..."
+      class="px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-600"
+    >
+    <select 
+      [(ngModel)]="itemsPerPage"
+      class="px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-600"
+    >
+      <option [value]="5">5 por página</option>
+      <option [value]="10">10 por página</option>
+    </select>
+  </div>
+
+  <!-- TABLA DE CANCIONES -->
+  <div class="overflow-x-auto bg-white rounded-lg shadow">
+    <table class="elegant-table">
+      <thead>
+        <tr>
+          <th (click)="sort('title')" class="cursor-pointer">
+            Título
+            <span *ngIf="sortColumn === 'title'">{{ sortDirection === 'asc' ? '↑' : '↓' }}</span>
+          </th>
+          <th (click)="sort('artist')" class="cursor-pointer">
+            Artista
+            <span *ngIf="sortColumn === 'artist'">{{ sortDirection === 'asc' ? '↑' : '↓' }}</span>
+          </th>
+          <th (click)="sort('genre')" class="cursor-pointer">
+            Género
+            <span *ngIf="sortColumn === 'genre'">{{ sortDirection === 'asc' ? '↑' : '↓' }}</span>
+          </th>
+          <th (click)="sort('streams_million')" class="cursor-pointer">
+            Streams (millones)
+            <span *ngIf="sortColumn === 'streams_million'">{{ sortDirection === 'asc' ? '↑' : '↓' }}</span>
+          </th>
+          <th (click)="sort('release_date')" class="cursor-pointer">
+            Fecha de Lanzamiento
+            <span *ngIf="sortColumn === 'release_date'">{{ sortDirection === 'asc' ? '↑' : '↓' }}</span>
+          </th>
+          <th>Enlace</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let song of paginatedSongs" class="hover:bg-blue-50">
+          <td>{{ song.title }}</td>
+          <td>{{ song.artist }}</td>
+          <td>{{ song.genre }}</td>
+          <td>{{ song.streams_million }}</td>
+          <td>{{ song.release_date }}</td>
+          <td>
+            <a href="{{ song.link }}" target="_blank" class="text-blue-600 hover:underline">Ver</a>
+          </td>
+        </tr>
+        <tr *ngIf="paginatedSongs.length === 0">
+          <td colspan="6" class="no-results">No se encontraron resultados.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- PAGINACIÓN -->
+  <div class="pagination">
+    <span class="text-sm">
+      Página {{ currentPage }} de {{ totalPages }}
+    </span>
+    <div class="flex gap-2">
+      <button 
+        (click)="previousPage()"
+        [disabled]="currentPage === 1"
+        class="px-4 py-2 border rounded-lg disabled:opacity-50 bg-blue-500 text-white hover:bg-blue-600"
+      >
+        Anterior
+      </button>
+      <button 
+        (click)="nextPage()"
+        [disabled]="currentPage === totalPages"
+        class="px-4 py-2 border rounded-lg disabled:opacity-50 bg-blue-500 text-white hover:bg-blue-600"
+      >
+        Siguiente
+      </button>
+    </div>
+  </div>
+
+  
+</div>

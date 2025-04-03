@@ -1,0 +1,66 @@
+<div class="table-container">
+    <mat-form-field class="filter" appearance="outline">
+      <mat-label>Buscar</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Buscar por nombre, email..." />
+    </mat-form-field>
+  
+    <div class="mat-table-container">
+        <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+            <ng-container matColumnDef="sessionId">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+              <td mat-cell *matCellDef="let session">{{ session.sessionId }}</td>
+            </ng-container>
+        
+            <ng-container matColumnDef="email">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Email</th>
+              <td mat-cell *matCellDef="let session">{{ session.email }}</td>
+            </ng-container>
+        
+            <ng-container matColumnDef="nickname">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Apodo</th>
+              <td mat-cell *matCellDef="let session">{{ session.nickname }}</td>
+            </ng-container>
+        
+            <ng-container matColumnDef="macAddress">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>MacAddres</th>
+              <td mat-cell *matCellDef="let session" class="long-text-cell"> {{ session.macAddress }} </td>
+            </ng-container>
+      
+            <ng-container matColumnDef="createdAt">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Creado</th>
+              <td mat-cell *matCellDef="let session"> {{ session.createdAt }} </td>
+            </ng-container>
+      
+            <ng-container matColumnDef="lastAccesed">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Último acceso</th>
+              <td mat-cell *matCellDef="let session"> {{ session.lastAccesed }} </td>
+            </ng-container>
+      
+            <ng-container matColumnDef="serverIp">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>IP Servidor</th>
+              <td mat-cell *matCellDef="let session" class="long-text-cell"> {{ session.serverIp }} </td>
+            </ng-container>
+      
+            <ng-container matColumnDef="serverMac">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>MAC Servidor</th>
+              <td mat-cell *matCellDef="let session" class="long-text-cell"> {{ session.serverMac }} </td>
+            </ng-container>
+      
+            <ng-container matColumnDef="clientIp">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>IP cliente</th>
+              <td mat-cell *matCellDef="let session" class="long-text-cell"> {{ session.clientIp }} </td>
+            </ng-container>
+      
+            <ng-container matColumnDef="status">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Estado</th>
+              <td mat-cell *matCellDef="let session"> {{ session.status }} </td>
+            </ng-container>
+        
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+    </div>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+  

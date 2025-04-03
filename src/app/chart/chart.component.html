@@ -1,0 +1,23 @@
+<div class="dashboard-container">
+    <div class="chart-section">
+      <h2>Gráfica de Datos</h2>
+      <div id="chartdiv"></div>
+    </div>
+    
+    <div class="form-section">
+      <div class="data-form">
+        <h3>Agregar Nuevo Dato</h3>
+        <form (ngSubmit)="addData()">
+          <div class="form-group">
+            <label for="category">Categoría:</label>
+            <input type="text" id="category" [(ngModel)]="newData.category" name="category" required placeholder="Ej: Ventas">
+          </div>
+          <div class="form-group">
+            <label for="value">Valor:</label>
+            <input type="number" id="value" [(ngModel)]="newData.value" name="value" required placeholder="Ej: 100">
+          </div>
+          <button type="submit">Agregar Dato</button>
+        </form>
+      </div>
+    </div>
+  </div>

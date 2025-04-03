@@ -4,6 +4,7 @@ import { ContentComponent } from "../content/content.component";
 import { FooterComponent } from "../footer/footer.component";
 import { BreadcrumbComponent } from "../breadcrumb/breadcrumb.component";
 import { Router } from '@angular/router';
+import { GraficaBasicaComponent } from "../../grafica-basica/grafica-basica.component";
 
 @Component({
   selector: 'app-page-container',
@@ -12,7 +13,8 @@ import { Router } from '@angular/router';
   styleUrl: './page-container.component.css'
 })
 export class PageContainerComponent {
-  isSidebarVisible = true;
+  isSidebarVisible: boolean = false;
+
   toggleSidebar() {
     this.isSidebarVisible = !this.isSidebarVisible;
   }
@@ -35,5 +37,5 @@ export class PageContainerComponent {
   updateExerciseDescription(description: string) {
     this.selectedExercise = description; // 🔹 Actualiza la descripción cuando se hace clic en un ejercicio
   }
-  @Input() exercise: { name: string, description: string } = { name: '', description: '' };
+  @Input() exercise: { name: string, description: string ,objective:string } = { name: '', description: '' ,objective:''};
 }

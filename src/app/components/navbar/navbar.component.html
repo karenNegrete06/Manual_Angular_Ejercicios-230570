@@ -2,47 +2,160 @@
     <!-- Menú Principal -->
     <div class="flex space-x-4">
         <button class="hover:bg-blue-700 px-10 py-5 ml-64 rounded">Inicio</button>
-        <div class="relative group">
+        
+        <!-- Menú de Ejercicios -->
+        <div class="relative group-exercises">
             <button class="hover:bg-blue-700 px-3 py-2 rounded">Ejercicios ▼</button>
-            <div class="absolute hidden group-hover:block bg-white text-black shadow-lg mt-2">
+            <div class="absolute hidden group-exercises-hover:block bg-white text-black shadow-lg mt-2">
+                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-01'" 
+   (click)="setExercise('Ejercicio 1: Components in Angular', 
+   'En esta actividad, aprenderás a actualizar la plantilla para cambiar el contenido y los estilos para modificar la apariencia de un componente. Esto te permitirá personalizar fácilmente los componentes de tu aplicación Angular.', 
+   'Objetivo: Comprender la estructura y funcionalidad de los componentes en Angular, así como su personalización mediante cambios en la plantilla y estilos.')">
+   Ejercicio 1
+</a>
 
-                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-01'" (click)="setExercise('Ejercicio 1: Components in angular ', 'En esta actividad, aprenderás a actualizar la plantilla para cambiar el contenido y los estilos para modificar la apariencia de un componente. Esto te permitirá personalizar fácilmente los componentes de tu aplicación Angular.')">Ejercicio 1</a>
-                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-02'" (click)="setExercise('Ejercicio 2: Updating the Component Class','En esta actividad, aprenderás a agregar una propiedad en la clase y usar interpolación para mostrar datos dinámicos en la plantilla del componente. Utilizando la sintaxis {{ }}, puedes insertar valores, realizar cálculos o llamar a funciones directamente desde la plantilla.')">Ejercicio 2</a>
-                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-03'" (click)="setExercise('Ejercicio 3: Composing Components','En esta actividad, aprenderás a usar un componente dentro de otro en Angular. Cada componente tiene una propiedad selector que se usa como una etiqueta HTML, como <app-user />. Actualizarás la plantilla de AppComponent para incluir UserComponent usando su selector, y también agregarás UserComponent al array de imports de AppComponent. Esto te permitirá componer componentes y crear estructuras más complejas en tu aplicación.')">Ejercicio 3</a>
-                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-04'" (click)="setExercise('Ejercicio 4: Control Flow in Components -@if','En esta actividad, aprenderás a usar condiciones en las plantillas de Angular para mostrar u ocultar elementos basados en ciertas condiciones. Angular utiliza la sintaxis @if para expresar displays condicionales.')">Ejercicio 4</a>
-                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-05'" (click)="setExercise('Ejercicio 5: Control Flow in components -@for','En esta actividad, aprenderás a usar la sintaxis @for para repetir elementos dentro de una plantilla en Angular.')">Ejercicio 5</a>
-                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-06'" (click)="setExercise('Ejercicio 6: Property Binding in Angular','En esta actividad, aprenderás a usar la vinculación de propiedades en Angular para asignar valores dinámicamente a los atributos de los elementos HTML y componentes. ')">Ejercicio 6</a>
-                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-07'" (click)="setExercise('Ejercicio 7: Event handling','En esta actividad, aprenderás a agregar un manejador de eventos en Angular para responder a acciones del usuario, como clics o envíos de formularios. En Angular, se utilizan los paréntesis () para vincular eventos. Por ejemplo, al hacer clic en un botón, puedes ejecutar una función como greet(). ')">Ejercicio 7</a>
-                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-08'" (click)="setExercise('Ejercicio 8: Component Communication with @Input','En esta actividad, aprenderás a usar el decorador @Input en Angular para enviar datos desde un componente padre a un componente hijo. El decorador @Input se aplica a una propiedad de la clase de un componente, permitiendo que esa propiedad reciba valores desde el componente padre. ')">Ejercicio 8</a>
-                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-09'" (click)="setExercise('Ejercicio 9: Component Communication with @Output','En esta actividad, aprenderás a usar el decorador @Output y EventEmitter en Angular para permitir que los componentes hijos notifiquen a los componentes padres sobre eventos, como un clic de botón o un cambio en la lista. Usando @Output, puedes crear una propiedad que emita eventos hacia el componente padre.')">Ejercicio 9</a>
-                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-10'" (click)="setExercise('Ejercicio 10: Deferrable Views','En esta actividad, aprenderás a usar vistas diferidas en Angular para cargar secciones de un componente de manera diferida, mejorando el rendimiento de la aplicación. Usando el bloque @defer,se retrasa la carga de componentes como los comentarios, hasta que el navegador esté inactivo o el contenido entre en el área visible (viewport).')">Ejercicio 10</a>
-                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-11'" (click)="setExercise('Ejercicio 11: Optimizing images','En esta actividad, aprenderás a usar la directiva NgOptimizedImage de Angular para optimizar la carga de imágenes en tu aplicación. Al usar esta directiva, Angular maneja automáticamente la carga eficiente de imágenes, lo que mejora el rendimiento y las puntuaciones de Core Web Vitals.')">Ejercicio 11</a>
-                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-12'" (click)="setExercise('Ejercicio 12: Routing Overview','En esta práctica, se configurará el enrutamiento en una aplicación Angular para permitir la navegación entre diferentes páginas.')">Ejercicio 12</a>
-                
+<a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-02'" 
+   (click)="setExercise('Ejercicio 2: Updating the Component Class', 
+   'En esta actividad, aprenderás a agregar una propiedad en la clase y usar interpolación para mostrar datos dinámicos en la plantilla del componente.', 
+   'Objetivo: Aprender a manejar datos dentro de un componente y mostrarlos dinámicamente usando interpolación en Angular.')">
+   Ejercicio 2
+</a>
+
+<a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-03'" 
+   (click)="setExercise('Ejercicio 3: Composing Components', 
+   'En esta actividad, aprenderás a usar un componente dentro de otro en Angular.', 
+   'Objetivo: Entender la composición de componentes en Angular y cómo organizarlos de manera modular para reutilización.')">
+   Ejercicio 3
+</a>
+
+<a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-04'" 
+   (click)="setExercise('Ejercicio 4: Control Flow in Components -@if', 
+   'En esta actividad, aprenderás a usar condiciones en las plantillas de Angular para mostrar u ocultar elementos.', 
+   'Objetivo: Aprender a aplicar estructuras de control en plantillas para gestionar la visibilidad de elementos según condiciones.')">
+   Ejercicio 4
+</a>
+
+<a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-05'" 
+   (click)="setExercise('Ejercicio 5: Control Flow in Components -@for', 
+   'En esta actividad, aprenderás a usar la sintaxis @for para repetir elementos dentro de una plantilla en Angular.', 
+   'Objetivo: Comprender la iteración en Angular y cómo usar estructuras de control para mostrar listas de datos en la interfaz.')">
+   Ejercicio 5
+</a>
+
+<a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-06'" 
+   (click)="setExercise('Ejercicio 6: Property Binding in Angular', 
+   'En esta actividad, aprenderás a usar la vinculación de propiedades en Angular para asignar valores dinámicamente a los atributos de los elementos HTML y componentes.', 
+   'Objetivo: Explorar cómo la vinculación de propiedades permite modificar elementos HTML dinámicamente en Angular.')">
+   Ejercicio 6
+</a>
+
+<a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-07'" 
+   (click)="setExercise('Ejercicio 7: Event Handling', 
+   'En esta actividad, aprenderás a agregar un manejador de eventos en Angular para responder a acciones del usuario.', 
+   'Objetivo: Implementar eventos en Angular para mejorar la interacción entre el usuario y la aplicación.')">
+   Ejercicio 7
+</a>
+
+<a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-08'" 
+   (click)="setExercise('Ejercicio 8: Component Communication with @Input', 
+   'En esta actividad, aprenderás a usar el decorador @Input en Angular para enviar datos desde un componente padre a un componente hijo.', 
+   'Objetivo: Comprender el flujo de datos entre componentes mediante el decorador @Input en Angular.')">
+   Ejercicio 8
+</a>
+
+<a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-09'" 
+   (click)="setExercise('Ejercicio 9: Component Communication with @Output', 
+   'En esta actividad, aprenderás a usar el decorador @Output y EventEmitter en Angular para permitir que los componentes hijos notifiquen a los componentes padres sobre eventos.', 
+   'Objetivo: Implementar la comunicación de componentes usando @Output y EventEmitter en Angular.')">
+   Ejercicio 9
+</a>
+
+<a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-10'" 
+   (click)="setExercise('Ejercicio 10: Deferrable Views', 
+   'En esta actividad, aprenderás a usar vistas diferidas en Angular para cargar secciones de un componente de manera diferida.', 
+   'Objetivo: Optimizar la carga de contenido en Angular usando vistas diferidas para mejorar el rendimiento.')">
+   Ejercicio 10
+</a>
+
+<a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-11'" 
+   (click)="setExercise('Ejercicio 11: Optimizing Images', 
+   'En esta actividad, aprenderás a usar la directiva NgOptimizedImage de Angular para optimizar la carga de imágenes en tu aplicación.', 
+   'Objetivo: Mejorar el rendimiento de la aplicación a través de la optimización de imágenes con NgOptimizedImage.')">
+   Ejercicio 11
+</a>
+
+<a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/ejercicio-12'" 
+   (click)="setExercise('Ejercicio 12: Routing Overview', 
+   'En esta práctica, se configurará el enrutamiento en una aplicación Angular para permitir la navegación entre diferentes páginas.', 
+   'Objetivo: Comprender el sistema de enrutamiento en Angular y cómo manejar la navegación entre diferentes vistas.')">
+   Ejercicio 12
+</a>
+
             </div>
-            <button mat-button>Tareas</button>
-            <button mat-button>Examen Práctico</button>
-            <button mat-button>Acerca de</button>
         </div>
+
+        <!-- Menú de Tareas -->
+        <div class="relative group-tasks">
+            <button class="hover:bg-blue-700 px-2 py-1 rounded">Tareas ▼</button>
+            <div class="absolute hidden group-tasks-hover:block bg-white text-black shadow-lg mt-2">
+                <a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/table-01'" 
+   (click)="setExercise('Tabla 1: Cantidad de Hermanos',
+   'En esta práctica, se realizó una encuesta con todos mis compañeros acerca de la cantidad de hermanos que tienen.', 
+   'Objetivo: Recopilar, organizar y visualizar datos sobre la cantidad de hermanos de los compañeros de clase en una tabla, permitiendo analizar la distribución de esta información.')">
+   Tabla 1
+</a>
+
+<a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/tabla-02'" 
+   (click)="setExercise('Tabla 2: Amazon',
+   'En esta práctica, se hizo la tabla que contiene los registros de stock de Amazon en el 2025.', 
+   'Objetivo: Desarrollar una tabla con registros de inventario de Amazon para el año 2025, analizando los datos de stock y su organización en un formato estructurado.')">
+   Tabla 2
+</a>
+
+<a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/tabla-03'" 
+   (click)="setExercise('Tabla 3: JSON',
+   'En esta práctica, se creó un archivo JSON que contiene las canciones más escuchadas en Spotify.', 
+   'Objetivo: Implementar y manipular un archivo JSON que almacene datos sobre las canciones más populares en Spotify, permitiendo su uso en futuras visualizaciones.')">
+   Tabla 3
+</a>
+
+<a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/grafica-basica'" 
+   (click)="setExercise('Gráfica 1: Básica',
+   'En esta práctica, se mostró la gráfica básica que tiene amChart.', 
+   'Objetivo: Comprender los fundamentos de amCharts mediante la implementación de una gráfica básica, explorando sus principales características y configuraciones.')">
+   Gráfica 1
+</a>
+
+<a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/grafica-02'" 
+   (click)="setExercise('Gráfica 2: Personalizada',
+   'En esta práctica, el profesor nos asignó a cada quien una tabla que teníamos que añadir.', 
+   'Objetivo: Aplicar personalización en amCharts integrando datos específicos asignados por el profesor, asegurando el correcto uso de estructuras y estilos en la visualización.')">
+   Gráfica 2
+</a>
+
+<a class="block px-4 py-2 hover:bg-gray-200" [routerLink]="'/grafica-03'" 
+   (click)="setExercise('Gráfica 3: JSON',
+   'En esta práctica, se está mostrando mediante una gráfica el contenido de la tabla JSON con los datos de las canciones.', 
+   'Objetivo: Representar visualmente datos extraídos de un archivo JSON utilizando amCharts, reforzando habilidades en la manipulación de datos y generación de gráficos.')">
+   Gráfica 3
+</a>
+
+            </div>
+        </div>
+        
+        <button mat-button>Examen Práctico</button>
+        <button mat-button>Acerca de</button>
     </div>
-  
+
     <!-- Botón de Usuario o Iniciar Sesión -->
-    <div class="relative group">
+    <div class="relative group-user">
         <button class="flex items-center space-x-2 hover:bg-blue-700 px-3 py-2 rounded">
             <span>Usuario</span>
             <img [src]="getSafeUrl(userImage)" alt="Usuario" class="user-avatar">
         </button>
-        <div class="absolute hidden group-hover:block bg-white text-black shadow-lg right-0 mt-2">
+        <div class="absolute hidden group-user-hover:block bg-white text-black shadow-lg right-0 mt-2">
             <a class="block px-4 py-2 hover:bg-gray-200">Perfil</a>
             <a class="block px-4 py-2 hover:bg-gray-200" (click)="logout()">Cerrar sesión</a>
         </div>
     </div>
-
-  <!-- Sidebar con la descripción del Ejercicio -->
-
-  </nav>
-  
-  
-
-  
-  
+</nav>
